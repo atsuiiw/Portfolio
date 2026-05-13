@@ -1,5 +1,5 @@
 import React from "react"
-import {useEffect, useState} from "react"
+import {useState} from "react"
 
 function WatchDemo(){
     const [modal, modalState] = useState(false);
@@ -22,7 +22,6 @@ function WatchDemo(){
                     <div className={`popupWindow ${isClosing ? 'popup-closing' : 'popup-opening'}`}>
                         <button onClick={closeModal} className="modalClose">X</button>
                         <div className="mainWindow">
-                            <iframe src="https://youtu.be/wsCyRWqLhTw"></iframe>
                         </div>
                         <ul>
                         </ul>
