@@ -11,23 +11,23 @@ function HeaderBox(){
     return (
         <div className="headerBox">
             <div className="topRow">
-                <img src={logo}/>
+                <img src={logo} alt="Overpan logo" />
                 <h1> Overpan's Portfolio [2026] </h1>
             </div>
             <div className="headerText">
                 <h2> Overpan's [aka atsuiiw] personal portfolio including animations, renders, videos and more. </h2>
                 <ul>
                     <li>
-                        <a href="https://youtube.com/@overpan"> <img src={youtube}/> </a>
+                        <a href="https://youtube.com/@overpan"> <img src={youtube} alt="YouTube" /> </a>
                     </li>
                     <li>
-                        <a href="https://x.com/overpan_"> <img src={Xlogo}/> </a>
+                        <a href="https://x.com/overpan_"> <img src={Xlogo} alt="X" /> </a>
                     </li>
                     <li>
-                        <a href="https://tiktok.com/@overpan_"> <img src={tiktok}/> </a>
+                        <a href="https://tiktok.com/@overpan_"> <img src={tiktok} alt="TikTok" /> </a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/8YbNpd35me"> <img src={discord}/> </a>
+                        <a href="https://discord.gg/8YbNpd35me"> <img src={discord} alt="Discord" /> </a>
                     </li>
                 </ul>
             </div>
