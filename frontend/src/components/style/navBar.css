@@ -88,20 +88,6 @@
     position: relative;
 }
 
-.homeSection {
-    /* Inherits everything, leaves background transparent for video */
-}
-
-.secondSection {
-    background-color: transparent;
-    color: black;
-}
-
-.thirdSection {
-    background-color: black;
-    color: white;
-}
-
 @media (max-width: 768px) {
     .topNav {
         padding: 0 20px;
@@ -109,5 +95,9 @@
 
     .navLinks {
         gap: 10px;
+    }
+
+    .topNav button {
+        font-size: 12px;
     }
 }
