@@ -68,10 +68,6 @@
     opacity: 0.8;
 }
 
-.audioBg {
-    padding: 8px 16px;
-}
-
 .audioBg:active,
 .langBtn:active,
 .navLinks button:active {
@@ -79,8 +75,8 @@
     opacity: 0.7;
 }
 
-.langBtn {
-    background-color: var(--midground-color);
+.audioBg,.langBtn {
+    background-color: var(--midground-color) !important;
     padding: 8px 16px;
     border-radius: 8px;
 }
@@ -121,8 +117,7 @@
         opacity: 1;
     }
 
-    .navLinks,
-    .settings {
+    .navLinks {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
@@ -138,6 +133,10 @@
         padding: 12px 14px;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.04);
+    }
+
+    .langBtn{
+        background-color: var(--midground-color) !important;
     }
 
     .navLinks button:hover,

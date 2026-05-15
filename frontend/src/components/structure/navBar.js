@@ -50,8 +50,6 @@ function NavBar({ lang, setLang, refs, bgmusic }) {
                     <button onClick={() => scrollToSection(homeRef)}>{lang === "ENG" ? "Home" : "หน้าแรก"}</button>
                     <button onClick={() => scrollToSection(timelineRef)}>{lang === "ENG" ? "Timeline" : "ไทม์ไลน์"}</button>
                     <button onClick={() => scrollToSection(projectDemoRef)}>{lang === "ENG" ? "Projects" : "โปรเจกต์"}</button>
-                </div>
-                <div className="settings">
                     <button className='audioBg' onClick={toggleAudio}>
                         {lang === "ENG" ? "Music" : "เพลง"}: {!audioBG ? "OFF" : "ON"}
                     </button>
