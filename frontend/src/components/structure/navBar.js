@@ -35,13 +35,14 @@ function NavBar({ lang, setLang, refs, bgmusic }) {
                 <button onClick={() => scrollToSection(projectDemoRef)}>{lang === "ENG" ? "Projects" : "โปรเจกต์"}</button>
             </div>
             <div className="settings">
-                <button className='audioBg' onClick={toggleAudio}> {!audioBG ? "🕨" : "🕪"} </button>
+                <button className='audioBg' onClick={toggleAudio}> [Music! {!audioBG ? "🕨" : "🕪"}] </button>
                 <button className="langBtn" onClick={() => setLang(lang === "ENG" ? "TH" : "ENG")}> {lang === "ENG" ? "ENG" : "TH"} </button>
                 <ReactAudioPlayer
                     ref={audioRef}
                     src={bgmusic}
                     loop={true}
                     volume={0.2}
+                    autoPlay={true}
                 />
             </div>
         </nav>

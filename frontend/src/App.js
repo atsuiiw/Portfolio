@@ -10,7 +10,7 @@ import WatchDemo from './components/structure/watchDemo.js';
 import NavBar from "./components/structure/navBar.js";
 
 // import static assets
-import backgroundPlaceholder from "./videos/preview-full-01.mp4";
+import background from "./videos/portfolio-background.mp4";
 import bgmusic from "./audios/Empty old City - Moonian.mp3";
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
 	return (
 		<div className="App">
 			{/* Background Video (Fixed) */}
-			<video autoPlay loop muted playsInline type="video/mp4" className="backgroundVideo">
-				<source src={backgroundPlaceholder} />
+			<video autoPlay loop muted playsInline  type="video/mp4" className="backgroundVideo">
+				<source src={background} />
 			</video>
 
 			{/* Fixed Navigation Bar */}

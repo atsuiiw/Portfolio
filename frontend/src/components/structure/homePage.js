@@ -10,7 +10,7 @@ function HomePage({ lang }) {
                 <div className="topRow">
                     <h1> Overpan's Portfolio [2026] </h1>
                 </div>
-                <div className="headerText">
+                <div className="descriptionText">
                     <h2> {lang === "ENG" ? "Overpan's [aka atsuiiw] personal portfolio including animations, renders, videos, compositing and more." :
                         "ผลงานส่วนตัวของ Overpan [aka atsuiiw] รวมถึงแอนิเมชั่น เรนเดอร์ วิดีโอ การทำคอมโพสิต และอื่นๆ"} </h2>
                     <ul>

@@ -59,16 +59,18 @@
 
 .headerBox ul li a {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 800;
   text-decoration: none;
+  color: rgb(180, 243, 191);
 }
 
 .headerBox ul li a:hover {
   text-decoration: underline;
 }
 
-.headerText h2 {
+.descriptionText h2 {
   text-align: left;
+  font-weight: 500;
 }
 
 a {
