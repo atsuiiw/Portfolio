@@ -1,0 +1,261 @@
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes modalOut {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+
+    to {
+        opacity: 0;
+        scale: 0.8;
+    }
+}
+
+@keyframes dimIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dimOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.modal {
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    translate: 50% 50%;
+    min-width: 60%;
+    height: 70%;
+    text-align: center;
+}
+
+.modal-opening {
+    animation: modalIn 0.3s ease-out;
+}
+
+.modal-closing {
+    animation: modalOut 0.3s ease-out;
+}
+
+.dim-opening {
+    animation: dimIn 0.3s ease-out;
+}
+
+.dim-closing {
+    animation: dimOut 0.3s ease-out;
+}
+
+.popup-opening {
+    animation: modalIn 0.3s ease-out;
+}
+
+.popup-closing {
+    animation: modalOut 0.3s ease-out;
+}
+
+.popupWindow {
+    background-color: rgb(51, 79, 97);
+    z-index: 0;
+    height: 100%;
+    box-shadow: 0px 0px 90px var(--midground-color);
+    border: solid rgb(95, 132, 153);
+
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.mainWindow {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.dim {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    scale: 10;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.demoBtn {
+    color: var(--foreground-color);
+    font-size: 20px;
+    font-family: inherit;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background-color: var(--background-color);
+    padding: 1em;
+    border-radius: 1em;
+    transition-duration: 0.15s;
+    border: none;
+}
+
+.demoBtn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.demoBtn:active {
+    scale: 0.8;
+    opacity: 0.8;
+}
+
+.modalClose {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    translate: 20px -20px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-weight: 800;
+    border: none;
+    background-color: var(--midground-color);
+    color: var(--foreground-color);
+    box-shadow: 0px 0px 10px var(--background-color);
+
+    transition-duration: 0.15s;
+}
+
+.modalClose:hover {
+    scale: 0.9;
+    cursor: pointer;
+}
+
+.modalClose:active {
+    scale: 0.8;
+}
+
+.popupWindow ul {
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    width: 100%;
+    height: 90%;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.popupWindow ul li {
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: auto;
+    min-height: 50px;
+}
+
+.popupWindow ul li button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.popupWindow ul li button:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+}
+
+.popupWindow ul li button:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .demoBtn {
+        font-size: 16px;
+        padding: 0.8em;
+    }
+
+    .modal {
+        min-width: 95vw;
+        height: 85vh;
+    }
+
+    .modalClose {
+        translate: 10px -10px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .popupWindow {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .mainWindow {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .popupWindow ul {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+        gap: 10px;
+        padding: 0px;
+    }
+
+    .popupWindow ul li {
+        width: 100%;
+        flex-grow: 1;
+        height: auto;
+    }
+
+    .popupWindow ul li button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

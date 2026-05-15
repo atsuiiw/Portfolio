@@ -1,0 +1,194 @@
+.timeline-page-container {
+    background-color: var(--background-color, #1a1a1a);
+    /* Fallback to dark if not set */
+    min-height: 100vh;
+    padding: 60px 20px;
+    font-family: inherit;
+    min-width: 70%;
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px var(--midground-color);
+    border: solid var(--midground-color) 2px;
+    color: white;
+
+    margin-top: 2em;
+    margin-bottom: 10em;
+}
+
+.timeline-page-container h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3rem;
+}
+
+.timeline {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* The vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 4px;
+    background-color: var(--midground-color, #555);
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 100px;
+    /* Space for the line and circle */
+}
+
+/* The hollow circle */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    /* Center with the line (40px + 2px line center - 12px radius) */
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 4px solid var(--midground-color, #555);
+    background-color: var(--background-color, #1a1a1a);
+    z-index: 0;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.timeline-year {
+    font-size: 2.2rem;
+    margin: 0;
+    color: var(--text-color, #fff);
+}
+
+.timeline-arrow {
+    font-size: 1.5rem;
+    color: var(--midground-color, #888);
+}
+
+.timeline-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 100%;
+    color: var(--foreground-color);
+}
+
+/* Dropdown */
+.timeline-dropdown {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    color: var(--text-color, #fff);
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.learnings-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.learnings-section h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.learnings-section ul {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.media-section {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-wrapper>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
+
+    .dropdown-content {
+        flex-direction: column;
+    }
+
+    .timeline-year {
+        font-size: 1.8rem;
+    }
+}
